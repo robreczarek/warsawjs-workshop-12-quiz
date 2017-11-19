@@ -19,7 +19,12 @@ export default new Vuex.Store({
   mutations: {
     init(state, quiz) {
       state.quiz = quiz;
-    }
+    },
+    selectUserQuestionAnswer(state, { selectAnswerIndex, question }) {
+      state.quiz.questions.find(q => {
+        return q.title === question.title
+      }).userAnswerIndex = selectAnswerIndex;
+    },
   },
   getters: {
     quiz(state) {

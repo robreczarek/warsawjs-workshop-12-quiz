@@ -28,7 +28,10 @@
     },
     methods: {
       selectAnswer: function(selectAnswerIndex) {
-        console.log(selectAnswerIndex, this.question);
+        this.$store.commit('selectUserQuestionAnswer', {
+          selectAnswerIndex,
+          question: this.question
+        });
       }
     },
   }
