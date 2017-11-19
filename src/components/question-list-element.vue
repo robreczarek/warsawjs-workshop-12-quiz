@@ -1,12 +1,14 @@
 <template>
   <div class="card" v-if="question">
-    <div class="card-header">
-      <div class="card-header-title">{{ question.title }}</div>
-    </div>
+    <header class="card-header">
+      <p class="card-header-title">{{ question.title }}</p>
+    </header>
     <div class="card-content">
-      <ul>
-        <li v-for="answer in question.answers">{{ answer }}</li>
-      </ul>
+      <div class="content">
+        <ul>
+          <li v-for="answer in question.answers">{{ answer }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
