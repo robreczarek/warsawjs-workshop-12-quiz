@@ -1,6 +1,6 @@
 <template>
   <section v-if="questions">
-    <QuestionListElement v-for="question in questions" :question="question"></QuestionListElement>
+    <QuestionListElement v-for="question in questions" :question="question" :key="question.title"></QuestionListElement>
   </section>
 </template>
 
