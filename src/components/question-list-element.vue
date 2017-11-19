@@ -6,7 +6,12 @@
     <div class="card-content">
       <div class="content">
         <ul>
-          <li v-for="answer in question.answers" :key="answer">{{ answer }}</li>
+          <p
+            v-for="(answer, index) in question.answers"
+            :key="answer"
+            v-on:click="selectAnswer(index)">
+              {{ answer }}
+          </p>
         </ul>
       </div>
     </div>
@@ -20,7 +25,12 @@
     name: 'QuestionListElement',
     props: {
       question: Object
-    }
+    },
+    methods: {
+      selectAnswer: function(selectAnswerIndex) {
+        console.log(selectAnswerIndex, this.question);
+      }
+    },
   }
 </script>
 
