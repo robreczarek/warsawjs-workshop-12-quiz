@@ -6,7 +6,7 @@
     <div class="card-content">
       <div class="content">
         <ul>
-          <li v-for="answer in question.answers">{{ answer }}</li>
+          <li v-for="answer in question.answers" :key="answer">{{ answer }}</li>
         </ul>
       </div>
     </div>
